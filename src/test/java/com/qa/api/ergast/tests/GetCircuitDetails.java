@@ -17,9 +17,9 @@ public class GetCircuitDetails {
 		try {
 			String xml = Files.readString(Paths.get(xmlPath));
 			List<String> circuitId= XmlPathUtil.readList(xml, "MRData.CircuitTable.Circuit.@circuitId");
-			System.out.println(circuitId);
+			System.out.println("CircuitId is " + circuitId);
 			String latitude = XmlPathUtil.read(xml, "**.find{it.@circuitId == 'albert_park'}.Location.@lat");
-			System.out.println(latitude);
+			System.out.println("Latitude is " +latitude);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
